@@ -1,35 +1,21 @@
-'''
-Program Name : frequency.py
-Input        : List of Integers
-Output       : Integer
-Description  : It is used to find frequency of maximum times occured number
-Author       : Omkar Jadhav
-Date         : 7-March-2022
-'''
+def Check(no):
+	N=0
+	cnt=0
+	while(no>0):
+		N=no%10
+		if(N==2):
+			cnt=cnt+1
+		no=no//10
 
-def freq_fun(list,value):
-	count=0
-	for no in list:
-		if(no==value):
-			count=count+1
-
-	return count
+	return cnt
 
 def main():
-	print("Enter the number you want to load in list")
+	Result=0
+	print("Enter the number:")
 	no=int(input())
 
-	list=[]
-
-	print("Enter the elements:")
-	for i in range(no):
-		list.append(int(input()))
-
-	print("Enter the number to search frequency")
-	no1=int(input())
-
-	result=freq_fun(list,no1)
-	print("Frequency of the number is:",result)
+	Result=Check(no)
+	print("Frequency of 2 is: ",Result)
 
 if __name__=="__main__":
 	main()
