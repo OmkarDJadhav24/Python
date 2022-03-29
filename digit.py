@@ -1,20 +1,20 @@
-'''
-Program Name : digit.py
-Input        : Integer
-Output       : Integer
-Description  : It is used for addition of digits of number
-Author       : Omkar Jadhav
-Date         : 7-March-2022
-'''
+def Check(no):
+	N=0
+	list=[]
+	while(no>0):
+		N=no%10
+		list.append(N)
+		no=no//10
+
+	print(list)
+	for i in range(len(list)-1,-1,-1):
+		print(list[i])
 
 def main():
-	print("Enter the number")
+	print("Enter the number:")
 	no=int(input())
 
-	count=0
-	while(no>0):
-		count=count+no%10
-		no=no//10
-	print("Addition is:",count)
+	Check(no)
+
 if __name__=="__main__":
 	main()
